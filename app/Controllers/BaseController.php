@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Config\Smarty\SmartyTemplate;
+
 abstract class BaseController {
 
     protected $url;
@@ -10,6 +12,7 @@ abstract class BaseController {
     function __construct($url, $action){
         $this->url = $url;
         $this->action = $action;
+        $this->tpl = new SmartyTemplate;
     }
 
     function executeAction(){

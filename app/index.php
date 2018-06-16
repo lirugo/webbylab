@@ -13,4 +13,17 @@ ini_set('display_errors',1);
 //-----------------------------------------------------
 require_once('../vendor/autoload.php');
 
-$test = new \App\Classes\Test;
+require_once('./Loader.php');
+
+//Load smarty
+require_once('./smarty/Smarty.class.php');
+
+$expected_controllers = ['index', 'home'];
+
+if(!empty($_GET)){
+    if([$_GET['controller'], $expected_controllers]){
+        $controller = new Loader($_GET);
+        $controller = $controller->createController();
+        $controller->executeAction();
+    }
+}
