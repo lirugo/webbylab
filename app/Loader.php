@@ -12,7 +12,6 @@ class Loader {
         if(!empty($_GET)){
             $this->url = $_GET;
         }
-
         if(isset($this->url['controller'])){
             $this->controller = $this->namespace . $this->url['controller'];
         }else {
