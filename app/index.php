@@ -31,9 +31,6 @@ require_once('./Loader.php');
 require_once('./smarty/Smarty.class.php');
 
 
-
-$expected_controllers = ['index', 'home'];
-
 if(!empty($_GET)){
     if([$_GET['controller'], $expected_controllers]){
         $controller = new Loader($_GET);

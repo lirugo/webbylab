@@ -10,7 +10,7 @@
                 <a class="nav-link" href="/app/index.php?controller=home&action=index">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Add film</a>
+                <a class="nav-link" href="/app/index.php?controller=home&action=create">Add film</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/app/index.php?controller=home&action=show">Show films</a>
