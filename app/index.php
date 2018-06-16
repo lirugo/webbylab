@@ -3,6 +3,18 @@
 ini_set('display_errors',1);
 
 //-----------------------------------------------------
+// Config db
+//-----------------------------------------------------
+$GLOBALS['config'] = [
+    'mysql' => [
+        'host' => 'localhost',
+        'database' => 'webbylab',
+        'username' => 'root',
+        'password' => ''
+    ]
+];
+
+//-----------------------------------------------------
 // Autoload without composer
 //-----------------------------------------------------
 //require_once('autoload.php');
@@ -17,6 +29,8 @@ require_once('./Loader.php');
 
 //Load smarty
 require_once('./smarty/Smarty.class.php');
+
+
 
 $expected_controllers = ['index', 'home'];
 

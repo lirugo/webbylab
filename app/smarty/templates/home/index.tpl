@@ -5,8 +5,8 @@
     <title></title>
 </head>
 <body>
-{if $header NE ''}
-    <h1>{$header}</h1>
-{/if}
+{foreach from=$films key=k item=i}
+    Film: {$i.name} <br/>
+{/foreach}
 </body>
 </html>
