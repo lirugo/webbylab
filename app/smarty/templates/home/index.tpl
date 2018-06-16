@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-{foreach from=$films key=k item=i}
-    Film: {$i.name} <br/>
-{/foreach}
-</body>
-</html>
+{extends file="../_includes/_layouts/app.tpl"}
+
+{block name=content}
+
+    My Body
+
+{/block}
