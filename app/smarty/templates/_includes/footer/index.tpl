@@ -1,1 +1,3 @@
-<h2>Footer</h2>
+<footer class="footer bg-dark">
+    <p>Footer</p>
+</footer>
