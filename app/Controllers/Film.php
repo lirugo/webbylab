@@ -11,8 +11,6 @@ class Film extends BaseController{
         $model = new FilmModel();
         $films = $model->getFilms();
 
-//        echo '<pre>';
-//        var_dump($films);
         if($films)
             $this->tpl->assign('films', $films);
 
@@ -68,6 +66,20 @@ class Film extends BaseController{
     }
 
     function search(){
+
+        $model = new FilmModel();
+
+        $filmsByName = $model->findByName($_POST['search']);
+
+        $filmsByActorName = $model->findByActorName($_POST['search']);
+
+        if($filmsByName)
+            $this->tpl->assign('filmsByName', $filmsByName);
+
+        if($filmsByActorName)
+            $this->tpl->assign('filmsByActorName', $filmsByActorName);
+
+
         $this->tpl->display('home/film/search.tpl');
     }
 

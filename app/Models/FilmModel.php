@@ -68,5 +68,43 @@ class FilmModel extends BaseModel{
         return $this->db->query($sql);
     }
 
+    function findByName($name){
+        $dbh = $this->db->prepare("
+          SELECT * FROM films
+          WHERE name = '".$name."'
+          ORDER BY id DESC 
+        ");
+        $dbh->execute();
+
+        if($dbh->rowCount()){
+            return $dbh->fetchAll();
+        }
+    }
+
+    function findByActorName($name){
+        //Search actor
+        $dbh = $this->db->prepare("
+          SELECT * FROM actors
+          WHERE name = '".$name."'
+        ");
+        $dbh->execute();
+        $results = $dbh->fetchAll();
+
+        //Search films by actor
+        foreach ($results as $result) {
+            $dbh = $this->db->prepare("
+              SELECT * FROM films
+              WHERE id = '" . $result['film_id'] . "'
+            ");
+            $dbh->execute();
+            $films[] = $dbh->fetch();
+        }
+
+        if($films != NULL)
+            if(count($films)){
+                return $films;
+            }
+    }
+
 
 }

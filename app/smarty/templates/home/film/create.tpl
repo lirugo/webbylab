@@ -1,5 +1,7 @@
 {extends file="../../_includes/_layouts/app.tpl"}
 
+{block name=title}Add{/block}
+
 {block name=stylesheets}
     <link href="./smarty/static/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css"/>
 {/block}
