@@ -11,10 +11,15 @@ class Film extends BaseController{
         $model = new FilmModel();
         $films = $model->getFilms();
 
+        for($i = 0; $i < count($films); $i++){
+            $actors = $model->getActors($films[$i]['id']);
+            $films[$i]['actors'] = $actors;
+        }
+
         if($films)
             $this->tpl->assign('films', $films);
 
-        $this->tpl->display('home/film/index.tpl');
+        $this->tpl->display('app/film/index.tpl');
     }
 
     function show(){
@@ -33,11 +38,11 @@ class Film extends BaseController{
         if($actrors)
             $this->tpl->assign('actors', $actrors);
 
-        $this->tpl->display('home/film/show.tpl');
+        $this->tpl->display('app/film/show.tpl');
     }
 
     function create(){
-        $this->tpl->display('home/film/create.tpl');
+        $this->tpl->display('app/film/create.tpl');
     }
 
     function postCreate(){
@@ -80,7 +85,11 @@ class Film extends BaseController{
             $this->tpl->assign('filmsByActorName', $filmsByActorName);
 
 
-        $this->tpl->display('home/film/search.tpl');
+        $this->tpl->display('app/film/search.tpl');
+    }
+
+    function import(){
+        $this->tpl->display('app/film/import.tpl');
     }
 
 }

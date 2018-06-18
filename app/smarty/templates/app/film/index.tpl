@@ -1,6 +1,5 @@
 {extends file="../../_includes/_layouts/app.tpl"}
 
-
 {block name=title}Show{/block}
 
 {block name=content}
@@ -17,15 +16,13 @@
                             {*<p class="card-text">Some desc.</p>*}
                         </div>
                         <ul class="list-group list-group-flush">
-                            {*{for $foo=0 to count($film.actors)}*}
-                                {*<li class="list-group-item">{$film.actors[$foo]}</li>*}
-                            {*{/for}*}
-
-                            <li class="list-group-item">John Doe</li>
-                            <li class="list-group-item">John Doe</li>
-                            <li class="list-group-item">John Doe</li>
-                            <li class="list-group-item">John Doe</li>
-                            <li class="list-group-item">John Doe</li>
+                            {if $film.actors}
+                                {for $foo=0 to count($film.actors)-1}
+                                    <li class="list-group-item">{$film.actors[$foo].name}</li>
+                                {/for}
+                            {else}
+                                <li class="list-group-item">No actors added yet...</li>
+                            {/if}
                         </ul>
                         <a href="/app/index.php?controller=film&action=show&id={$film.id}" class="btn btn-outline-success">Details</a>
                     </div>

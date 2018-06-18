@@ -8,7 +8,7 @@ use http\Env\Request;
 class Home extends BaseController{
 
     function index(){
-        $this->tpl->display('home/index.tpl');
+        $this->tpl->display('app/index.tpl');
     }
 
 }

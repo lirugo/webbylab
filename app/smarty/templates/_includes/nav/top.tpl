@@ -16,7 +16,7 @@
                 <a class="nav-link" href="/app/index.php?controller=film&action=index">Show films</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Import films</a>
+                <a class="nav-link" href="/app/index.php?controller=film&action=import">Import films</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0" action="/app/index.php?controller=film&action=search" method="POST">
