@@ -68,6 +68,27 @@ class FilmModel extends BaseModel{
         return $this->db->query($sql);
     }
 
+    function addFilmFromFile($name, $release_date, $format, $actors){
+        //SQL request
+        $sql = "
+          INSERT INTO films (name,release_date,format) 
+          VALUES('".$name."','".$release_date."-01-01"."','".$format."')
+          ";
+
+        $this->db->query($sql);
+        $filmId = $this->db->lastInsertId();
+        for($i=0; $i<count($actors); $i++){
+            $sql = "
+              INSERT INTO actors (film_id, name) 
+              VALUES('".$filmId."','".$actors[$i]."')
+              ";
+            $this->db->query($sql);
+        }
+
+        //Save
+        return ['status' => 'OK'];
+    }
+
     function findByName($name){
         $dbh = $this->db->prepare("
           SELECT * FROM films

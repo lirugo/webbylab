@@ -92,4 +92,80 @@ class Film extends BaseController{
         $this->tpl->display('app/film/import.tpl');
     }
 
+    function postImport(){
+//        var_dump($_POST);
+//        var_dump($_FILES["file"]['name']);
+
+        try{
+            $fp = fopen($_FILES['file']['tmp_name'], 'rb');
+            while ( ($line = fgets($fp)) !== false) {
+                if(substr($line, 0,6) == 'Title:'){
+                    //Get title
+                    $title = trim(
+                        substr(
+                            $line,
+                            strripos($line, ':')+1,
+                            strlen($line)
+                        )
+                    );
+                    //Get date
+                    $line = fgets($fp);
+                    $release_date = trim(
+                        substr(
+                            $line,
+                            strripos($line, ':')+1,
+                            strlen($line)
+                        )
+                    );
+                    //Get format
+                    $line = fgets($fp);
+                    $format = trim(
+                        substr(
+                            $line,
+                            strripos($line, ':')+1,
+                            strlen($line)
+                        )
+                    );
+                    //Get actors
+                    $line = fgets($fp);
+                    $actorsAll = trim(
+                        substr(
+                            $line,
+                            strripos($line, ':')+1,
+                            strlen($line)
+                        )
+                    );
+                    //Get array of actors name
+                    for($i=0; $i<strlen($actorsAll); $i++){
+                        $name = '';
+                        while($actorsAll[$i] != ","){
+                            $name .= $actorsAll[$i];
+                            $i++;
+                            if($i > strlen($line))
+                                break;
+                        }
+                        $name = trim($name);
+                        $actors[] = $name;
+                    }
+                    echo '<pre>';
+                    var_dump($actors);
+
+                    echo '</pre>';
+                    //Persist ot db
+                    $film = new FilmModel();
+                    $film->addFilmFromFile($title, $release_date, $format, $actors);
+                    $actors = array();
+
+
+
+
+
+                }
+            }
+        } catch (\Exception $e)
+        {
+            var_dump($e);
+        }
+    }
+
 }

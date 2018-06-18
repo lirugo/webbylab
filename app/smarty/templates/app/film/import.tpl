@@ -9,7 +9,7 @@
            <div class="col-md-6 offset-md-3">
                <div class="card">
                    <div class="card-body">
-                       <form class="form-inline">
+                       <form action="/app/index.php?controller=film&action=postImport" method="POST" enctype="multipart/form-data" class="form-inline">
                            <div class="form-group">
                                <button type="submit" class="btn btn-success pull-right m-r-10">Upload</button>
                            </div>
