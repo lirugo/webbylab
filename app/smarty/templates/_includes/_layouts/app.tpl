@@ -12,14 +12,14 @@
 </head>
 <body>
 
-<div id="app" style="padding-bottom: 75px;">
+<div id="app">
     {*Navigation menu*}
     {include file='../../_includes/nav/top.tpl'}
 
-    {*Block content*}
-    {block name=content}
-
-    {/block}
+    <div class="content">
+        {*Block content*}
+        {block name=content}{/block}
+    </div>
 
     {*Footer*}
     {include file='../../_includes/footer/index.tpl'}

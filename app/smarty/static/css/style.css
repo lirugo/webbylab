@@ -13,3 +13,6 @@
 .m-t-25{
     margin-top: 25px;
 }
+.content{
+    min-height: 80vh;
+}
