@@ -6,17 +6,17 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="/app/index.php?controller=home&action=index">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/app/index.php?controller=home&action=create">Add film</a>
+                <a class="nav-link" href="/app/index.php?controller=film&action=create">Add film</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/app/index.php?controller=home&action=show">Show films</a>
+                <a class="nav-link" href="/app/index.php?controller=film&action=index">Show films</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Import film</a>
+                <a class="nav-link" href="#">Import films</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

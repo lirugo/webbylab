@@ -1,6 +1,6 @@
 <?php
 /* Smarty version 3.1.32, created on 2018-06-16 14:05:26
-  from 'C:\OSPanel\domains\webbylab\app\smarty\templates\home\film\show.tpl' */
+  from 'C:\OSPanel\domains\webbylab\app\smarty\templates\home\film\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
@@ -11,7 +11,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     '165d691d2f4e48c0d765f2155b756dbf6a628901' => 
     array (
-      0 => 'C:\\OSPanel\\domains\\webbylab\\app\\smarty\\templates\\home\\film\\show.tpl',
+      0 => 'C:\\OSPanel\\domains\\webbylab\\app\\smarty\\templates\\home\\film\\index.tpl',
       1 => 1529147079,
       2 => 'file',
     ),
