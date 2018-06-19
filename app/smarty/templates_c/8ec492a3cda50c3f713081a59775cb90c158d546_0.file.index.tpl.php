@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-06-19 10:57:58
+/* Smarty version 3.1.32, created on 2018-06-19 11:01:41
   from 'C:\OSPanel\domains\webbylab\app\smarty\templates\app\film\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b28b786aa1df2_06113203',
+  'unifunc' => 'content_5b28b865720da2_96944145',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8ec492a3cda50c3f713081a59775cb90c158d546' => 
     array (
       0 => 'C:\\OSPanel\\domains\\webbylab\\app\\smarty\\templates\\app\\film\\index.tpl',
-      1 => 1529395077,
+      1 => 1529395085,
       2 => 'file',
     ),
   ),
@@ -20,28 +20,28 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b28b786aa1df2_06113203 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b28b865720da2_96944145 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10624823705b28b786a8ef40_65482235', 'title');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4713544655b28b8656d1553_50761145', 'title');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3686627545b28b786a8fd81_13296325', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16720151855b28b8656d2161_29964714', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "../../_includes/_layouts/app.tpl");
 }
 /* {block 'title'} */
-class Block_10624823705b28b786a8ef40_65482235 extends Smarty_Internal_Block
+class Block_4713544655b28b8656d1553_50761145 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'title' => 
   array (
-    0 => 'Block_10624823705b28b786a8ef40_65482235',
+    0 => 'Block_4713544655b28b8656d1553_50761145',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -51,12 +51,12 @@ Show<?php
 }
 /* {/block 'title'} */
 /* {block 'content'} */
-class Block_3686627545b28b786a8fd81_13296325 extends Smarty_Internal_Block
+class Block_16720151855b28b8656d2161_29964714 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_3686627545b28b786a8fd81_13296325',
+    0 => 'Block_16720151855b28b8656d2161_29964714',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -68,8 +68,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <a href="/app/index.php?controller=film&action=index&sort=release_date&dir=DESC" class="btn btn-primary">New</a>
-                        <a href="/app/index.php?controller=film&action=index&sort=release_date&dir=ASC" class="btn btn-primary">Old</a>
+                        <a href="/app/index.php?controller=film&action=index&sort=release_date&dir=DESC" class="btn btn-primary">New first</a>
+                        <a href="/app/index.php?controller=film&action=index&sort=release_date&dir=ASC" class="btn btn-primary">Old first</a>
                         <a href="/app/index.php?controller=film&action=index&sort=name&dir=ASC" class="btn btn-primary">From A to Z</a>
                         <a href="/app/index.php?controller=film&action=index&sort=name&dir=DESC" class="btn btn-primary">From Z to A</a>
                     </div>

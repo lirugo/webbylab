@@ -18,10 +18,13 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-head bg-info">
-                        <h5 class="card-title text-center m-t-10">Description</h5>
+                        <h5 class="card-title text-center m-t-10">Action</h5>
                     </div>
                     <div class="card-body">
-                        Block for description
+                        <form action="/app/index.php?controller=film&action=remove" method="POST">
+                            <input name="id" type="hidden" value="{$film[0].id}"/>
+                            <button type="submit" class="btn btn-danger btn-block">Remove</button>
+                        </form>
                     </div>
                 </div>
             </div>

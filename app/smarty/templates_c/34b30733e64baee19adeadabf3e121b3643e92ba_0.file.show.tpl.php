@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-06-19 10:13:12
+/* Smarty version 3.1.32, created on 2018-06-19 11:02:16
   from 'C:\OSPanel\domains\webbylab\app\smarty\templates\app\film\show.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b28ad081b8da5_94646833',
+  'unifunc' => 'content_5b28b88834d134_97300773',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '34b30733e64baee19adeadabf3e121b3643e92ba' => 
     array (
       0 => 'C:\\OSPanel\\domains\\webbylab\\app\\smarty\\templates\\app\\film\\show.tpl',
-      1 => 1529392389,
+      1 => 1529395333,
       2 => 'file',
     ),
   ),
@@ -20,23 +20,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b28ad081b8da5_94646833 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b28b88834d134_97300773 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2575334525b28ad08111344_35678782', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_425845545b28b888335041_32456550', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "../../_includes/_layouts/app.tpl");
 }
 /* {block 'content'} */
-class Block_2575334525b28ad08111344_35678782 extends Smarty_Internal_Block
+class Block_425845545b28b888335041_32456550 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_2575334525b28ad08111344_35678782',
+    0 => 'Block_425845545b28b888335041_32456550',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -61,10 +61,14 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-head bg-info">
-                        <h5 class="card-title text-center m-t-10">Description</h5>
+                        <h5 class="card-title text-center m-t-10">Action</h5>
                     </div>
                     <div class="card-body">
-                        Block for description
+                        <form action="/app/index.php?controller=film&action=remove" method="POST">
+                            <input name="id" type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['film']->value[0]['id'];?>
+"/>
+                            <button type="submit" class="btn btn-danger btn-block">Remove</button>
+                        </form>
                     </div>
                 </div>
             </div>

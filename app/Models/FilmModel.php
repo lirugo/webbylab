@@ -132,5 +132,16 @@ class FilmModel extends BaseModel{
             }
     }
 
+    function remove($id){
+        //SQL request
+        $sql = "
+          DELETE FROM films 
+          WHERE id = $id
+          ";
+
+        //Save
+        return $this->db->query($sql);
+    }
+
 
 }

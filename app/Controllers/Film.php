@@ -74,6 +74,12 @@ class Film extends BaseController{
         header("Location: /app/index.php?controller=film&action=show&id=".$id);
     }
 
+    function remove(){
+        $model = new FilmModel();
+        $film = $model->remove($_POST['id']);
+        header("Location: /app/index.php?controller=film&action=index");
+    }
+
     function search(){
 
         $model = new FilmModel();
