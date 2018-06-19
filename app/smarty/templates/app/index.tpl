@@ -11,9 +11,9 @@
                         <h5 class="card-title">Hello on our portal</h5>
 
                         {*<p class="card-text">Some text msg</p>*}
-                        <a href="#" class="btn btn-outline-primary text-center">Add film</a>
-                        <a href="#" class="btn btn-outline-primary">Show films</a>
-                        <a href="#" class="btn btn-outline-primary">Import film</a>
+                        <a href="/app/index.php?controller=film&action=create" class="btn btn-outline-primary text-center">Add film</a>
+                        <a href="/app/index.php?controller=film&action=index" class="btn btn-outline-primary">Show films</a>
+                        <a href="/app/index.php?controller=film&action=import" class="btn btn-outline-primary">Import film</a>
                     </div>
                 </div>
             </div>
