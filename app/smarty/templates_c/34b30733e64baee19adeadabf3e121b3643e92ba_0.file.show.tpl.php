@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-06-18 17:56:43
+/* Smarty version 3.1.32, created on 2018-06-19 10:13:12
   from 'C:\OSPanel\domains\webbylab\app\smarty\templates\app\film\show.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b27c82b2732f9_31023348',
+  'unifunc' => 'content_5b28ad081b8da5_94646833',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '34b30733e64baee19adeadabf3e121b3643e92ba' => 
     array (
       0 => 'C:\\OSPanel\\domains\\webbylab\\app\\smarty\\templates\\app\\film\\show.tpl',
-      1 => 1529325618,
+      1 => 1529392389,
       2 => 'file',
     ),
   ),
@@ -20,23 +20,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b27c82b2732f9_31023348 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b28ad081b8da5_94646833 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19261194695b27c82b1c1b27_50767389', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2575334525b28ad08111344_35678782', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "../../_includes/_layouts/app.tpl");
 }
 /* {block 'content'} */
-class Block_19261194695b27c82b1c1b27_50767389 extends Smarty_Internal_Block
+class Block_2575334525b28ad08111344_35678782 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_19261194695b27c82b1c1b27_50767389',
+    0 => 'Block_2575334525b28ad08111344_35678782',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -64,7 +64,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                         <h5 class="card-title text-center m-t-10">Description</h5>
                     </div>
                     <div class="card-body">
-                        Avatar, marketed as James Cameron's Avatar, is a 2009 American[7][8] epic science fiction film directed, written, produced, and co-edited by James Cameron, and starring Sam Worthington, Zoe Saldana, Stephen Lang, Michelle Rodriguez, and Sigourney Weaver. The film is set in the mid-22nd century, when humans are colonizing Pandora, a lush habitable moon of a gas giant in the Alpha Centauri star system, in order to mine the mineral unobtanium,[9][10] a room-temperature superconductor.[11] The expansion of the mining colony threatens the continued existence of a local tribe of Na'vi – a humanoid species indigenous to Pandora. The film's title refers to a genetically engineered Na'vi body with the mind of a remotely located human that is used to interact with the natives of Pandora.[12]
+                        Block for description
                     </div>
                 </div>
             </div>

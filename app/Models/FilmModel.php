@@ -29,10 +29,15 @@ class FilmModel extends BaseModel{
         return $this->db->query($sql);
     }
 
-    function getFilms(){
+    function getFilms($sort = null, $dir = null){
+        if($sort == NULL)
+            $sort = 'name';
+        if($dir == NULL)
+            $dir = 'asc';
+
         $dbh = $this->db->prepare("
           SELECT * FROM films
-          ORDER BY id DESC 
+          ORDER BY $sort  $dir 
         ");
         $dbh->execute();
 

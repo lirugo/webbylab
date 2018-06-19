@@ -8,10 +8,14 @@ use http\Env\Request;
 class Film extends BaseController{
 
     function index(){
-        $model = new FilmModel();
-        $films = $model->getFilms();
+        $sort = $_GET['sort'];
+        $dir = $_GET['dir'];
 
-        for($i = 0; $i < count($films); $i++){
+        $model = new FilmModel();
+        $films = $model->getFilms($sort, $dir);
+
+        if($films)
+            for($i = 0; $i < count($films); $i++){
             $actors = $model->getActors($films[$i]['id']);
             $films[$i]['actors'] = $actors;
         }
@@ -93,8 +97,6 @@ class Film extends BaseController{
     }
 
     function postImport(){
-//        var_dump($_POST);
-//        var_dump($_FILES["file"]['name']);
 
         try{
             $fp = fopen($_FILES['file']['tmp_name'], 'rb');
@@ -147,19 +149,13 @@ class Film extends BaseController{
                         $name = trim($name);
                         $actors[] = $name;
                     }
-                    echo '<pre>';
-                    var_dump($actors);
-
-                    echo '</pre>';
                     //Persist ot db
                     $film = new FilmModel();
                     $film->addFilmFromFile($title, $release_date, $format, $actors);
                     $actors = array();
 
-
-
-
-
+                    //Redirect
+                    header("Location: /app/index.php?controller=film&action=index");
                 }
             }
         } catch (\Exception $e)
