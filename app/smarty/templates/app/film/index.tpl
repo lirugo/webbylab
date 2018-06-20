@@ -6,20 +6,19 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-body">
-                        <a href="/app/index.php?controller=film&action=index&sort=release_date&dir=DESC" class="btn btn-primary">New first</a>
-                        <a href="/app/index.php?controller=film&action=index&sort=release_date&dir=ASC" class="btn btn-primary">Old first</a>
-                        <a href="/app/index.php?controller=film&action=index&sort=name&dir=ASC" class="btn btn-primary">From A to Z</a>
-                        <a href="/app/index.php?controller=film&action=index&sort=name&dir=DESC" class="btn btn-primary">From Z to A</a>
+            {if $films}
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="/app/index.php?controller=film&action=index&sort=release_date&dir=DESC" class="btn btn-primary">New first</a>
+                                <a href="/app/index.php?controller=film&action=index&sort=release_date&dir=ASC" class="btn btn-primary">Old first</a>
+                                <a href="/app/index.php?controller=film&action=index&sort=name&dir=ASC" class="btn btn-primary">From A to Z</a>
+                                <a href="/app/index.php?controller=film&action=index&sort=name&dir=DESC" class="btn btn-primary">From Z to A</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="row">
-            {if $films}
                 {foreach from=$films key=k item=film}
                     <div class="col-md-3 m-t-25">
                         <div class="card">
