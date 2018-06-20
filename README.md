@@ -54,8 +54,6 @@ Open your browser
 http://localhost:8000/app/index.php?controller=home&action=index
 ```
 
-A little demo [here](https://drive.google.com/open?id=1VH2QnS8DcL4zw6GUZLY-wcROFWZfnu3F)
-
 ## Built With
 
 * [Composer](https://getcomposer.org/) - Is an application-level package manager for the PHP
